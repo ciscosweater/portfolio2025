@@ -6,6 +6,7 @@
   background-color: var(--background);
   border-radius: 0 0 40px 40px;
   color: var(--foreground);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .center {

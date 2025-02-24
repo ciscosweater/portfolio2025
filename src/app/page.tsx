@@ -5,12 +5,10 @@ import styles from "./page.module.css";
 import AboutMe from "./pages/about/about";
 import React from "react";
 import Experiences from "./pages/experiences/experiences";
-import Technologies from "./pages/technologies/technologies";
 import Projects from "./pages/projects/projects";
 
 const OPTIONS: any = {
   about: { component: AboutMe, label: 'Sobre mim' },
-  tech: { component: Technologies, label: 'Tecnologias' },
   exp: { component: Experiences, label: 'Experiência' },
   projects: { component: Projects, label: 'Projetos' }
 };

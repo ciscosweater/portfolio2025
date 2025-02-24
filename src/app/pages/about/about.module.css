@@ -5,5 +5,90 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+}
+
+.profilePicture {
+    border: 5px solid #778DA9;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 10px;
+}
+
+.leftBox {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.leftBox button {
+    margin-top: 20px;
+    padding: 0 50px;
+    border: none;
+    cursor: pointer;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #778DA9;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: ease-in-out 0.2s;
+}
+
+.leftBox button:hover {
+    transform: scale(1.05);
+}
+
+.leftBox span {
+    color: #0D1B2A;
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.rightBox {
+    height: 100%;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rightBox h1 {
+    color: #778DA9;
+    margin: 20px 0px;
+}
+
+.rightBox p {
+    text-align: justify;
+}
+
+.techDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    row-gap: 30px;
+}
+
+.tech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech p {
+    margin-top: 10px;
 }
