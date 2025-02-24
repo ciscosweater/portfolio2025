@@ -1,12 +1,14 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #E0E1DD;
+  --foreground: #0D1B2A;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #E0E1DD;
+    --foreground: #0D1B2A;
   }
 }
 
@@ -17,9 +19,9 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--background);
+  background: var(--foreground);
+  font-family: 'SF Pro Display', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

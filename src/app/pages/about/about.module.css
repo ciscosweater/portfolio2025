@@ -1,0 +1,9 @@
+.page {
+    height: calc(100vh - 50px);
+    background-color: var(--foreground);
+    color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+}
