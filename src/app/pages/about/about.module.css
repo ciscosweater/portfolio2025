@@ -20,6 +20,12 @@
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-bottom: 10px;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.profilePicture:hover {
+    transform: scale(1.02);
 }
 
 .leftBox {
@@ -39,6 +45,7 @@
     height: 50px;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #778DA9;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -47,6 +54,11 @@
 
 .leftBox button:hover {
     transform: scale(1.05);
+}
+
+.buttonIcon {
+    filter: brightness(0) saturate(100%) invert(9%) sepia(22%) saturate(1442%) hue-rotate(169deg) brightness(96%) contrast(97%);
+    margin-right: 10px;
 }
 
 .leftBox span {
@@ -87,6 +99,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 10px;
+    border: 3px solid #12263b;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.tech:hover {
+    transform: scale(1.1);
 }
 
 .tech p {

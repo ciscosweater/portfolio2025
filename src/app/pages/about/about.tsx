@@ -47,23 +47,41 @@ export default function AboutMe() {
                     />
                     <button>
                         <Image
-                            src={'/assets/profile.jpg'}
+                            src={'/assets/icons/download.png'}
                             width={20}
                             height={20}
                             alt=""
+                            className={styles.buttonIcon}
                         />
                         <span>Currículo</span>
                     </button>
                     <button>
+                        <Image
+                            src={'/assets/icons/github.png'}
+                            width={20}
+                            height={20}
+                            alt=""
+                            className={styles.buttonIcon}
+                        />
                         <span>Github</span>
                     </button>
                     <button>
+                        <Image
+                            src={'/assets/icons/email.png'}
+                            width={20}
+                            height={20}
+                            alt=""
+                            className={styles.buttonIcon}
+                        />
                         <span>Email</span>
                     </button>
                 </div>
                 <div className={styles.rightBox}>
                     <h1>Sobre mim</h1>
-                    <p>Sou um estudante de engenharia civil em transição para a área de programação, guiado por uma paixão genuína por tecnologia e inovação. Tenho habilidades sólidas e abrangentes no ecossistema JavaScript, com domínio em TypeScript, Node.js, React e Next.js, desenvolvidas e refinadas por meio de projetos desafiadores que testaram minha criatividade e capacidade técnica. Busco constantemente oportunidades para expandir meu conhecimento, enfrentar novos desafios e contribuir de forma significativa para o sucesso de projetos ambiciosos. Com fluência em inglês e uma compreensão avançada que me permite acompanhar discussões técnicas complexas, estou pronto para integrar equipes inovadoras, aplicar minhas competências com excelência e agregar valor em ambientes dinâmicos e colaborativos </p>
+                    <p>Sou um estudante de engenharia civil em transição para a área de programação, guiado por uma paixão genuína por tecnologia e inovação.<br/> 
+                        Tenho habilidades sólidas e abrangentes no ecossistema JavaScript, com domínio em TypeScript, Node.js, React e Next.js, desenvolvidas e refinadas por meio de projetos desafiadores que testaram minha criatividade e capacidade técnica.<br/> 
+                        Busco constantemente oportunidades para expandir meu conhecimento, enfrentar novos desafios e contribuir de forma significativa para o sucesso de projetos ambiciosos.<br/>
+                        Com fluência em inglês e uma compreensão avançada que me permite acompanhar discussões técnicas complexas, estou pronto para integrar equipes inovadoras, aplicar minhas competências com excelência e agregar valor em ambientes dinâmicos e colaborativos </p>
                     <h1>Tecnologias</h1>
                     <div className={styles.techDiv}>
                         {Object.keys(TECHS).map((key) => renderTechs(key))}
