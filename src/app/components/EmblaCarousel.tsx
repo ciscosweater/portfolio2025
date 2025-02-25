@@ -6,7 +6,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import styles from "./embla.module.css"
 
 type PropType = {
-  slides: any
+  slides: Array<any>
   options?: EmblaOptionsType
 }
 
@@ -35,7 +35,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <section className={styles.embla}>
       <div className={styles.embla__viewport} ref={emblaRef}>
         <div className={styles.embla__container}>
-          {slides.map((slide: any,index:any) => (
+          {slides.map((slide: React.ReactNode,index:number) => (
             <div className={styles.embla__slide} key={index}>
               {slide}
             </div>

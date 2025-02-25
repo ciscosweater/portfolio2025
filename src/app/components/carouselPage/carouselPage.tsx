@@ -7,8 +7,8 @@ interface CarouselPageProps {
     title: string;
     subtitle?: string;
     description: string;
-    images?: any;
-    captions?: any;
+    images?: Array<string>;
+    captions?: Array<string>;
     link: string;
     canVisit: boolean;
 }
