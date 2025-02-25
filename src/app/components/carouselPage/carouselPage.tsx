@@ -2,6 +2,7 @@
 import Link from "next/link";
 import styles from "./carouselPage.module.css"
 import React from "react";
+import Image from "next/image";
 
 interface CarouselPageProps {
     title: string;
@@ -49,10 +50,14 @@ export default function CarouselPage(props: CarouselPageProps) {
             <div className={styles.rightBox}>
                 {images.length > 0 ? (
                 <>
-                    <img
-                    className={styles.picture}
+                    <div className={styles.picture}>
+                    <Image
                     src={images[currentIndex]}
-                    ></img>
+                    fill
+                    alt="Screenshot do projeto"
+                    className={styles.currentPicture}
+                    />
+                    </div>
                     <div className={styles.controls}>
                     <button onClick={handlePrev} className={`${styles.button} ${styles.buttonLeft}`}>
                         {"<"}

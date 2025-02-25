@@ -6,7 +6,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import styles from "./embla.module.css"
 
 type PropType = {
-  slides: Array<any>
+  slides: Array<React.ReactNode>
   options?: EmblaOptionsType
 }
 
