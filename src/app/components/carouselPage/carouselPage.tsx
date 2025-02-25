@@ -1,15 +1,76 @@
+'use client'
+import Link from "next/link";
 import styles from "./carouselPage.module.css"
+import React from "react";
 
-export default function CarouselPage(props: any) {
+interface CarouselPageProps {
+    title: string;
+    subtitle?: string;
+    description: string;
+    images?: any;
+    captions?: any;
+    link: string;
+    canVisit: boolean;
+}
+
+export default function CarouselPage(props: CarouselPageProps) {
+    const [currentIndex, setCurrentIndex] = React.useState(0);
+
+    // Supondo que props.images seja um array com os caminhos/nomes das imagens
+    const images = props.images || []; // Array de imagens vindo via props
+    const captions = props.captions || []; // Array opcional de legendas
+
+    // Funções para navegar entre as imagens
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
+    };
+
+    const handlePrev = () => {
+        setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? images.length - 1 : prevIndex - 1
+        );
+    };
+
     return (
         <>
         <div className={styles.container}>
             <div className={styles.leftBox}>
                 <h1>{props.title}</h1>
+                {props.subtitle && <h3>{props.subtitle}</h3>}
                 <p>{props.description}</p>
+                <Link href={props.link} target="_blank" rel="noopener noreferrer" passHref>
+                    <button className={styles.linkButton}>
+                        <span>{props.canVisit === true? "Visitar" : "Link do repositório"}</span>
+                    </button>
+                </Link>
             </div>
             <div className={styles.rightBox}>
-                <div className={styles.picture}></div>
+                {images.length > 0 ? (
+                <>
+                    <img
+                    className={styles.picture}
+                    src={images[currentIndex]}
+                    ></img>
+                    <div className={styles.controls}>
+                    <button onClick={handlePrev} className={`${styles.button} ${styles.buttonLeft}`}>
+                        {"<"}
+                    </button>
+                    <button onClick={handleNext} className={`${styles.button} ${styles.buttonRight}`}>
+                        {">"}
+                    </button>
+                    </div>
+                    <p className={styles.caption}>
+                    {captions[currentIndex] || `Imagem ${currentIndex + 1} de ${images.length}`}
+                    </p>
+                    <p className={styles.counter}>
+                        {currentIndex + 1} de {images.length}
+                    </p>
+                </>
+                ) : (
+                <p>Nenhuma imagem disponível</p>
+                )}
             </div>
         </div>
         </>

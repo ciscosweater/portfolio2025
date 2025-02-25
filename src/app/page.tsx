@@ -6,10 +6,12 @@ import AboutMe from "./pages/about/about";
 import React from "react";
 import Experiences from "./pages/experiences/experiences";
 import Projects from "./pages/projects/projects";
+import Certifications from "./pages/certifications/certifications";
 
 const OPTIONS: any = {
   about: { component: AboutMe, label: 'Sobre mim' },
   exp: { component: Experiences, label: 'Experiência' },
+  cert: { component: Certifications, label: 'Educação' },
   projects: { component: Projects, label: 'Projetos' }
 };
 

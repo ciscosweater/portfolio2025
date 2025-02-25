@@ -1,5 +1,6 @@
 import styles from "./about.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface Tech {
@@ -45,36 +46,42 @@ export default function AboutMe() {
                         alt=""
                         className={styles.profilePicture}
                     />
-                    <button>
-                        <Image
-                            src={'/assets/icons/download.png'}
-                            width={20}
-                            height={20}
-                            alt=""
-                            className={styles.buttonIcon}
-                        />
-                        <span>Currículo</span>
-                    </button>
-                    <button>
-                        <Image
-                            src={'/assets/icons/github.png'}
-                            width={20}
-                            height={20}
-                            alt=""
-                            className={styles.buttonIcon}
-                        />
-                        <span>Github</span>
-                    </button>
-                    <button>
-                        <Image
-                            src={'/assets/icons/email.png'}
-                            width={20}
-                            height={20}
-                            alt=""
-                            className={styles.buttonIcon}
-                        />
-                        <span>Email</span>
-                    </button>
+                    <Link href="https://www.google.com/" target="_blank" rel="noopener noreferrer" passHref>
+                        <button>
+                            <Image
+                                src={'/assets/icons/download.png'}
+                                width={20}
+                                height={20}
+                                alt=""
+                                className={styles.buttonIcon}
+                            />
+                            <span>Currículo</span>
+                        </button>
+                    </Link>
+                    <Link href="https://github.com/ciscosweater" target="_blank" rel="noopener noreferrer" passHref>
+                        <button>
+                            <Image
+                                src={'/assets/icons/github.png'}
+                                width={20}
+                                height={20}
+                                alt=""
+                                className={styles.buttonIcon}
+                            />
+                            <span>Github</span>
+                        </button>
+                    </Link>
+                    <Link href="mailto:gustavo.f6041@gmail.com" target="_blank" rel="noopener noreferrer" passHref>
+                        <button>
+                            <Image
+                                src={'/assets/icons/email.png'}
+                                width={20}
+                                height={20}
+                                alt=""
+                                className={styles.buttonIcon}
+                            />
+                            <span>Email</span>
+                        </button>
+                    </Link>
                 </div>
                 <div className={styles.rightBox}>
                     <h1>Sobre mim</h1>
