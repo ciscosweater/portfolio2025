@@ -1,9 +1,26 @@
 [
   {
+    "id": "irmaos-de-sangue",
+    "title": "Irmãos de Sangue",
+    "subtitle": "Next.js, Firebase, TypeScript",
+    "description": "Plataforma moderna para conectar doadores de sangue a campanhas em todo o Brasil. Desenvolvida com Next.js 15, Firebase e geolocalização para facilitar encontros entre doadores e receptoras. Oferece dashboard com campanhas próximas baseadas na localização, sistema de compatibilidade sanguínea com 8 tipos, e gerenciamento completo de doações. Integra Google Maps API para buscas precisas e notificações automáticas via email, SMS e WhatsApp.",
+    "images": [
+      "/assets/screenshots/irmaos-de-sangue/homepage.png",
+      "/assets/screenshots/irmaos-de-sangue/dashboard.png",
+      "/assets/screenshots/irmaos-de-sangue/campaigns.png",
+      "/assets/screenshots/irmaos-de-sangue/admin.png"
+    ],
+    "captions": ["Dashboard do Usuário", "Campanhas Disponíveis", "Painel Administrativo", "Versão Mobile"],
+    "link": "https://irmaos-de-sangue.vercel.app",
+    "canVisit": true,
+    "tags": ["nextjs", "firebase", "typescript", "tailwind", "react", "geolocation", "blood-donation"],
+    "featured": true
+  },
+  {
     "id": "cardapio",
     "title": "Cardápio - Delivery",
     "subtitle": "React",
-    "description": "Cardápio interativo desenvolvido utilizando React e seus Hooks, retorna ao usuário o seu carrinho de compras, o total a ser pago pelos itens e envia para o WhatsApp do estabelecimento uma mensagem com o resumo do pedido. A implementação com React proporciona uma experiência dinâmica e fluida, enquanto os Hooks foram utilizados para gerenciar o estado do carrinho e os cálculos em tempo real, oferecendo praticidade e interatividade ao usuário. A funcionalidade de envio para o WhatsApp foi integrada de forma eficiente, permitindo uma comunicação direta e conveniente com o estabelecimento, otimizando o processo de compra e tornando o cardápio uma ferramenta moderna e acessível.",
+    "description": "Cardápio interativo desenvolvido com React e Hooks para gerenciamento de carrinho de compras. Calcula o total dos itens em tempo real e envia o resumo do pedido diretamente para o WhatsApp do estabelecimento. Oferece experiência dinâmica e fluida com comunicação direta e conveniente, otimizando o processo de compra de forma moderna e acessível.",
     "images": [
       "/assets/screenshots/cardapio/home.png",
       "/assets/screenshots/cardapio/homemobile.png",
@@ -20,7 +37,7 @@
     "id": "ytinterface",
     "title": "Youtube - Interface",
     "subtitle": "React",
-    "description": "Clone apenas da interface do YouTube, com responsividade para mobile, desenvolvido utilizando o React, apresenta menu lateral e header funcionais, diversas páginas, e uma aparência limpa e moderna que se aproxima do verdadeiro YouTube. O projeto inclui navegação intuitiva entre as seções, como página inicial, vídeos em destaque e área de pesquisa, além de suporte a temas claro e escuro para melhor experiência do usuário. Os componentes foram estruturados de forma modular, garantindo fácil manutenção e escalabilidade, com atenção especial aos detalhes visuais, como tipografia, ícones e animações sutis, que refletem o design característico da plataforma original.",
+    "description": "Clone da interface do YouTube desenvolvido com React, apresentando menu lateral e header funcionais com navegação intuitiva entre diversas páginas. Inclui suporte a temas claro e escuro, área de pesquisa e vídeos em destaque. Componentes estruturados de forma modular para fácil manutenção, com design responsivo e detalhes visuais que refletem a plataforma original.",
     "images": [
       "/assets/screenshots/youtube/home.png",
       "/assets/screenshots/youtube/home2.png",
@@ -36,7 +53,7 @@
     "id": "ytcompleto",
     "title": "Youtube - Completo",
     "subtitle": "React, Node.JS e MariaDB",
-    "description": "Clone completo do YouTube com backend, frontend e banco de dados. Desenvolvido utilizando React para o frontend, Node.JS para o backend e MariaDB para persistência de dados. O sistema inclui autenticação de usuários, upload de vídeos, sistema de likes, comentários, inscrições e busca avançada. A arquitetura foi projetada para ser escalável, com API RESTful, autenticação JWT e otimizações de performance. O frontend oferece uma experiência idêntica à do YouTube, com design responsivo e transições suaves.",
+    "description": "Clone completo do YouTube com stack fullstack: React frontend, Node.JS backend e MariaDB. Inclui autenticação de usuários, upload de vídeos, sistema de likes, comentários, inscrições e busca avançada. Arquitetura escalável com API RESTful, autenticação JWT e otimizações de performance, oferecendo experiência idêntica à plataforma original.",
     "images": [
       "/assets/screenshots/youtube2/home.png",
       "/assets/screenshots/youtube2/openmenu.png",
@@ -58,7 +75,7 @@
     "id": "whatsapp",
     "title": "WhatsApp",
     "subtitle": "React, Node.JS, MariaDB e Socket-io",
-    "description": "Chat em tempo real desenvolvido com React, TypeScript, MariaDB, Node.JS e Socket.IO. Ainda em desenvolvimento, mas conta com um chat geral, cadastro e login de contas, design limpo e intuitivo que se aproxima fielmente ao WhatsApp que conhecemos. O sistema suporta mensagens instantâneas com baixa latência, exibição de status de conexão dos usuários e notificações em tempo real, proporcionando uma experiência fluida. A arquitetura utiliza uma combinação eficiente entre o backend em Node.JS para gerenciar as conexões e o banco MariaDB para armazenar dados de usuários e histórico de conversas, enquanto o frontend em React com TypeScript garante um código robusto e uma interface responsiva, adaptável a diferentes dispositivos.",
+    "description": "Chat em tempo real desenvolvido com React, TypeScript, MariaDB, Node.JS e Socket.IO. Oferece cadastro e login de contas, chat geral com mensagens instantâneas de baixa latência e notificações em tempo real. Design limpo e intuitivo que se aproxima do WhatsApp, com arquitetura eficiente para gerenciar conexões e armazenar histórico de conversas.",
     "images": [
       "/assets/screenshots/whatsapp/home.png",
       "/assets/screenshots/whatsapp/chat.png"
@@ -73,7 +90,7 @@
     "id": "quizgamer",
     "title": "Quiz Gamer",
     "subtitle": "Next.js",
-    "description": "Este projeto foi completamente desenvolvido utilizando o Next.js. Com essa tecnologia, os jogadores têm a oportunidade de desfrutar de uma experiência fluida e responsiva. O Next.js assume a lógica do Quiz e o banco de questões, aproveitando o renderização híbrida (SSR e SSG) para otimizar o desempenho e melhorar o carregamento das páginas. O sistema inclui um design interativo com feedback imediato para as respostas, suporte a múltiplas categorias de perguntas e um painel de pontuação dinâmico, tudo estruturado de forma a garantir escalabilidade e facilidade de atualização do conteúdo. Além disso, a integração com APIs permite a expansão do banco de questões e a personalização da experiência do usuário.",
+    "description": "Quiz interativo desenvolvido com Next.js, aproveitando renderização híbrida (SSR e SSG) para otimizar desempenho. Oferece design interativo com feedback imediato, múltiplas categorias de perguntas e painel de pontuação dinâmico. Estruturado para escalabilidade e fácil atualização de conteúdo, com integração de APIs para expansão do banco de questões.",
     "images": [
       "/assets/screenshots/quiztimer/home.png",
       "/assets/screenshots/quiztimer/question.png",
@@ -90,7 +107,7 @@
     "id": "montyhall",
     "title": "Problema de Monty Hall",
     "subtitle": "Next.js",
-    "description": "Um projeto Next.js inspirado no problema de Monty Hall, oferecendo uma aplicação interativa para o usuário escolher a quantidade de portas que serão geradas e em qual porta estará o presente, a fim de recriar e debater o paradoxo. A aplicação permite que o usuário selecione uma porta inicial e decida se deseja manter sua escolha ou trocá-la após a revelação de uma porta vazia. Além disso, apresenta estatísticas sobre as chances de vitória ao longo de múltiplas simulações, ajudando a visualizar o impacto da estratégia de troca. Com uma interface intuitiva e responsiva, o projeto serve como uma ferramenta educacional envolvente para explorar conceitos de probabilidade e tomada de decisão.",
+    "description": "Aplicação interativa inspirada no problema de Monty Hall, desenvolvida com Next.js. Permite escolher quantidade de portas e selecionar onde está o presente, com opção de manter ou trocar a escolha inicial. Apresenta estatísticas de vitória em múltiplas simulações, servindo como ferramenta educacional para explorar conceitos de probabilidade.",
     "images": [
       "/assets/screenshots/montyhall/home.png",
       "/assets/screenshots/montyhall/portas.png",
@@ -106,7 +123,7 @@
     "id": "enigma",
     "title": "Enigma",
     "subtitle": "React",
-    "description": "Uma aplicação desafiadora e divertida construída com React. Aqui, você terá a chance de testar seu conhecimento e habilidades em adivinhação com charadas. A aplicação é rápida, fácil de usar e oferece uma experiência de usuário incrível, com um design intuitivo e interativo. Cada charada traz múltiplas opções de resposta, feedback instantâneo e dicas para ajudar na resolução. Além disso, um sistema de pontuação e níveis de dificuldade progressivos tornam o jogo ainda mais envolvente. Ideal para quem quer se divertir enquanto exercita o raciocínio lógico e a criatividade!",
+    "description": "Aplicação desafiadora de charadas desenvolvida com React, oferecendo experiência intuitiva e interativa. Apresenta múltiplas opções de resposta com feedback instantâneo e dicas para auxiliar na resolução. Inclui sistema de pontuação e níveis de dificuldade progressivos, ideal para exercitar raciocínio lógico e criatividade de forma divertida.",
     "images": [
       "/assets/screenshots/enigma/desktop.png",
       "/assets/screenshots/enigma/mobile.png"
@@ -121,7 +138,7 @@
     "id": "batman",
     "title": "Batman",
     "subtitle": "HTML e CSS",
-    "description": "Este projeto de site promocional para o filme do Batman foi desenvolvido utilizando HTML e CSS. Apresenta uma interface elegante e atraente, com um design limpo e moderno para promover o filme e atrair o público. A estrutura em HTML proporciona uma base sólida e organizada, enquanto o CSS foi aplicado para estilizar os elementos, garantindo uma estética visual impactante que reflete a essência sombria e icônica do universo do Batman. A combinação dessas tecnologias resultou em um site responsivo e funcional, ideal para engajar os fãs e destacar os principais aspectos do filme.",
+    "description": "Site promocional para o filme do Batman desenvolvido com HTML e CSS. Apresenta interface elegante e atraente com design limpo e moderno que reflete a essência sombria do universo. Estrutura sólida em HTML com estilização CSS impactante, resultando em site responsivo e funcional ideal para engajar fãs e promover o filme.",
     "images": [
       "/assets/screenshots/batman/home.png",
       "/assets/screenshots/batman/comentarios.png",

@@ -107,9 +107,7 @@ export default function ProjectCard({
         </div>
 
         <p className={styles.description}>
-          {project.description.length > 150
-            ? `${project.description.substring(0, 150)}...`
-            : project.description}
+          {project.description}
         </p>
 
         <div className={styles.tags}>
