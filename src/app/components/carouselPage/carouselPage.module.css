@@ -5,6 +5,119 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: slideInLeft 0.6s ease-out;
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: auto;
+        min-height: 60vh;
+        padding: 30px 20px 0px 20px;
+        flex-direction: column;
+    }
+    
+    .leftBox {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    .rightBox {
+        width: 100%;
+        height: 50vh;
+        padding: 20px;
+    }
+    
+    .container h1 {
+        font-size: 24px;
+    }
+    
+    .container h3 {
+        font-size: 14px;
+    }
+    
+    .container p {
+        font-size: 14px;
+        max-width: 100%;
+    }
+    
+    .caption {
+        bottom: 20px;
+        left: 20px;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+    
+    .counter {
+        bottom: 20px;
+        right: 20px;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+    
+    .buttonLeft {
+        left: 20px;
+    }
+    
+    .buttonRight {
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 15px 0px 15px;
+        min-height: 50vh;
+    }
+    
+    .rightBox {
+        height: 40vh;
+        padding: 15px;
+    }
+    
+    .container h1 {
+        font-size: 20px;
+    }
+    
+    .container h3 {
+        font-size: 12px;
+    }
+    
+    .container p {
+        font-size: 13px;
+    }
+    
+    .leftBox p {
+        text-align: center;
+        max-width: 100%;
+        margin: 0 auto 20px auto;
+    }
+    
+    .caption {
+        bottom: 15px;
+        left: 15px;
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+    
+    .counter {
+        bottom: 15px;
+        right: 15px;
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+    
+    .buttonLeft {
+        left: 15px;
+    }
+    
+    .buttonRight {
+        right: 15px;
+    }
+    
+    .button {
+        padding: 8px 11px;
+    }
 }
 
 .leftBox {
@@ -13,13 +126,41 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+@media (max-width: 768px) {
+    .leftBox {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    
+    .leftBox p {
+        text-align: center;
+        max-width: 100%;
+        margin: 0 auto 20px auto;
+    }
+    
+    .leftBox .linkButton {
+        margin: 0 auto;
+    }
 }
 
 .rightBox {
     position: relative;
     width: 70%;
     height: 100%;
-    padding: 30px
+    padding: 30px;
+    animation: fadeInRight 0.8s ease-out 0.4s both;
+}
+
+@media (max-width: 768px) {
+    .rightBox {
+        width: 100%;
+        height: 50vh;
+        padding: 20px;
+    }
 }
 
 .picture {
@@ -30,11 +171,19 @@
     background-color: black;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .currentPicture {
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 20px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 768px) {
+    .currentPicture {
+        object-fit: cover;
+    }
 }
 
 .caption {
@@ -81,12 +230,13 @@
     border-radius: 50%;
     padding: 10px 13px;
     font-family: 'SF Pro Display', sans-serif;
-    transition: ease-in-out 0.2s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover {
-    transform: scale(1.05);
+    transform: scale(1.1) translateY(-2px);
     background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 8px;
 }
 
 .buttonLeft {
@@ -122,5 +272,39 @@
 }
 
 .linkButton:hover {
-    transform: scale(1.02);
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: rgba(119, 141, 169, 0.4) 0px 6px 12px;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

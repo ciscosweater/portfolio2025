@@ -27,9 +27,12 @@ export default function AboutMe() {
         <div key={key} className={styles.tech}>
           <Image
             src={`/assets/techs/${TECHS[key].asset}.png`}
-            width={75}
-            height={75}
+            width={60}
+            height={60}
             alt={TECHS[key].label}
+            loading="lazy"
+            sizes="(max-width: 480px) 40px, (max-width: 768px) 60px, 60px"
+            className={styles.techImage}
           />
           <p>{TECHS[key].label}</p>
         </div>
@@ -39,33 +42,25 @@ export default function AboutMe() {
         <div className={styles.page}>
             <div className={styles.container}>
                 <div className={styles.leftBox}>
-                    <Image 
+<Image
                         src={'/assets/profile.jpg'}
                         width={300}
                         height={300}
-                        alt=""
+                        alt="Foto de perfil"
                         className={styles.profilePicture}
+                        priority
                     />
-                    <Link href="https://www.google.com/" target="_blank" rel="noopener noreferrer" passHref>
-                        <button>
-                            <Image
-                                src={'/assets/icons/download.png'}
-                                width={20}
-                                height={20}
-                                alt=""
-                                className={styles.buttonIcon}
-                            />
-                            <span>Currículo</span>
-                        </button>
-                    </Link>
+                    
                     <Link href="https://github.com/ciscosweater" target="_blank" rel="noopener noreferrer" passHref>
                         <button>
                             <Image
                                 src={'/assets/icons/github.png'}
                                 width={20}
                                 height={20}
-                                alt=""
+                                alt="GitHub"
                                 className={styles.buttonIcon}
+                                loading="lazy"
+                                sizes="20px"
                             />
                             <span>Github</span>
                         </button>
@@ -76,8 +71,10 @@ export default function AboutMe() {
                                 src={'/assets/icons/email.png'}
                                 width={20}
                                 height={20}
-                                alt=""
+                                alt="Email"
                                 className={styles.buttonIcon}
+                                loading="lazy"
+                                sizes="20px"
                             />
                             <span>Email</span>
                         </button>
@@ -91,7 +88,11 @@ export default function AboutMe() {
                         Com fluência em inglês e uma compreensão avançada que me permite acompanhar discussões técnicas complexas, estou pronto para integrar equipes inovadoras, aplicar minhas competências com excelência e agregar valor em ambientes dinâmicos e colaborativos </p>
                     <h1>Tecnologias</h1>
                     <div className={styles.techDiv}>
-                        {Object.keys(TECHS).map((key) => renderTechs(key))}
+                        {Object.keys(TECHS).map((key, index) => (
+                            <div key={key} style={{ animationDelay: `${index * 0.1}s` }}>
+                                {renderTechs(key)}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

@@ -6,7 +6,65 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     --slide-spacing: 1rem;
     --slide-size: 100%;
+    animation: carouselSlideIn 0.8s ease-out 0.4s both;
   }
+
+@media (max-width: 768px) {
+    .embla {
+        width: 98%;
+        border-radius: 20px;
+        --slide-spacing: 0.5rem;
+    }
+    
+    .embla__controls {
+        padding: 0 15px 15px;
+        gap: 0.8rem;
+    }
+    
+    .embla__arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    
+    .embla__dot {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .embla__dot:after {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .embla {
+        border-radius: 15px;
+        --slide-spacing: 0.3rem;
+    }
+    
+    .embla__controls {
+        padding: 0 10px 10px;
+        gap: 0.5rem;
+    }
+    
+    .embla__arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    
+    .embla__dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .embla__dot:after {
+        width: 10px;
+        height: 10px;
+    }
+}
   .embla__viewport {
     overflow: hidden;
   }
@@ -20,6 +78,7 @@
     flex: 0 0 var(--slide-size);
     min-width: 0;
     padding-left: var(--slide-spacing);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .embla__slide__number {
     box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
@@ -32,21 +91,90 @@
     user-select: none;
   }
   .embla__controls {
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 1.2rem;
     margin-top: 1.8rem;
-    padding-left: 30px;
+    padding: 0 30px 20px;
+  }
+  .embla__arrows {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  .embla__arrow {
+    -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(135deg, #415A77 0%, #778DA9 100%);
+    touch-action: manipulation;
+    display: inline-flex;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #415A77;
+    padding: 0;
+    margin: 0;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(65, 90, 119, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  .embla__arrow:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+  .embla__arrow:hover {
+    background: linear-gradient(135deg, #778DA9 0%, #415A77 100%);
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(65, 90, 119, 0.4);
+    border-color: #778DA9;
+  }
+  .embla__arrow:hover:before {
+    left: 100%;
+  }
+  .embla__arrow:disabled {
+    background: linear-gradient(135deg, #ccc 0%, #999 100%);
+    cursor: not-allowed;
+    transform: scale(1) translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-color: #999;
+    opacity: 0.6;
+  }
+  .embla__arrow:disabled:hover {
+    transform: scale(1) translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .embla__arrow:disabled:hover:before {
+    left: -100%;
+  }
+  .embla__arrow--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
   .embla__dots {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
-    margin-bottom: 30px;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
   }
   .embla__dot {
     -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
@@ -66,6 +194,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .embla__dot:after {
     box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
@@ -79,5 +208,29 @@
   .embla__dotSelected:after {
     box-shadow: inset 0 0 0 0.2rem var(--text-body);
     background-color: #778DA9;
+    animation: dotPulse 0.4s ease-out;
   }
+
+@keyframes carouselSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dotPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
   

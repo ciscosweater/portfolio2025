@@ -19,6 +19,12 @@ export default function CarouselPage(props: CarouselPageProps) {
 
     // Supondo que props.images seja um array com os caminhos/nomes das imagens
     const images = props.images || []; // Array de imagens vindo via props
+    
+    // Converter para WebP quando disponível
+    const webpImages = images.map(img => {
+        const webpPath = img.replace(/\.(png|jpg|jpeg)$/, '.webp');
+        return webpPath;
+    });
     const captions = props.captions || []; // Array opcional de legendas
 
     // Funções para navegar entre as imagens
@@ -52,10 +58,14 @@ export default function CarouselPage(props: CarouselPageProps) {
                 <>
                     <div className={styles.picture}>
                     <Image
-                    src={images[currentIndex]}
+                    src={webpImages[currentIndex]}
                     fill
                     alt="Screenshot do projeto"
                     className={styles.currentPicture}
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 800px"
+                    quality={95}
+                    priority={false}
                     />
                     </div>
                     <div className={styles.controls}>

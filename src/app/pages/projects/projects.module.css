@@ -1,16 +1,135 @@
 .page {
-    height: calc(100vh - 50px);
-    background-color: var(--foreground);
-    color: var(--background);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  min-height: calc(100vh - 50px);
+  background-color: var(--foreground);
+  color: var(--background);
+  animation: fadeIn 0.8s ease-out;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  animation: slideUp 0.8s ease-out 0.2s both;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #778da9;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--background);
+  opacity: 0.8;
+  margin: 0;
+  line-height: 1.5;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop Responsiveness */
+@media (min-width: 1200px) {
+  .container {
+    padding: 60px 40px;
+  }
+  
+  .title {
+    font-size: 42px;
+  }
+  
+  .subtitle {
+    font-size: 20px;
+  }
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 1024px) {
+  .container {
+    padding: 32px 24px;
+  }
+  
+  .header {
+    margin-bottom: 40px;
+  }
+  
+  .title {
+    font-size: 32px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .page {
+    min-height: auto;
+    padding-top: 20px;
+  }
+  
+  .container {
+    padding: 24px 16px;
+  }
+  
+  .header {
+    margin-bottom: 32px;
+  }
+  
+  .title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+  
+  .subtitle {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 12px;
+  }
+  
+  .header {
+    margin-bottom: 24px;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+  }
 }

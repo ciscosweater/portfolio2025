@@ -2,9 +2,7 @@
 import styles from "./page.module.css";
 import AboutMe from "./pages/about/about";
 import React from "react";
-import Experiences from "./pages/experiences/experiences";
 import Projects from "./pages/projects/projects";
-import Certifications from "./pages/certifications/certifications";
 
 type OptionType = {
   component: React.ComponentType;
@@ -13,8 +11,6 @@ type OptionType = {
 
 const OPTIONS: Record<string, OptionType> = {
   about: { component: AboutMe, label: 'Sobre mim' },
-  exp: { component: Experiences, label: 'Experiência' },
-  cert: { component: Certifications, label: 'Educação' },
   projects: { component: Projects, label: 'Projetos' }
 };
 

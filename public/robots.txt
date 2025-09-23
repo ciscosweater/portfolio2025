@@ -1,0 +1,28 @@
+# Robots.txt for Gustavo Francisco Portfolio
+# https://gustavo-francisco.vercel.app
+
+User-agent: *
+Allow: /
+Allow: /assets/
+
+# Sitemap location
+Sitemap: https://gustavo-francisco.vercel.app/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Block common bot paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
+
+# Allow specific search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
