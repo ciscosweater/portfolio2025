@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio2025' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
 };
 
 export default nextConfig;
